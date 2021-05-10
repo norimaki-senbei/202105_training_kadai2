@@ -13,6 +13,11 @@ html(lang="jp")
       h1 秘密の匿名掲示板
     h2 新規投稿
     form(method="post" action="/posts")
+      h4 タイトル
+      div.form-group
+        //textarea(name="submitTitle" rows="1").form-control
+        input(type="text" name="submitTitle")
+      h4 内容
       div.form-group
         textarea(name="content" rows="4").form-control
         input(type="hidden" name="oneTimeToken" value=oneTimeToken)
