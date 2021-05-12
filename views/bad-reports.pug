@@ -17,7 +17,7 @@ html(lang="jp")
     h2 違反報告一覧
     each report in reports
       h2 id #{report.id} ポストID#{report.postId} reportedBy #{report.reportedBy}
-      h2 コンテンツ　#{displayContent}
+      h2 コンテンツ　#{report.content}
 //            - var isPostedByAdmin = (post.postedBy === 'admin')
 //            if isPostedByAdmin
 //              span #{post.id} : 管理人 ★
