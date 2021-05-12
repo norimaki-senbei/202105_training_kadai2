@@ -9,12 +9,14 @@ html(lang="jp")
     title 秘密の匿名掲示板
   body.container
     div.my-3
+      span.float-right #{user}でログイン中
+    div.my-3
       a(href="/logout").btn.btn-info.float-right ログアウト
       h1 秘密の匿名掲示板
     div.my-3
       a(href="/profile").btn.btn-secondary.float-right プロフィール
     
-    div.my-6
+    div.my-3
       a(href="/badReports").btn.btn-danger.float-right 違反報告一覧ページ
 
     h2 新規投稿
