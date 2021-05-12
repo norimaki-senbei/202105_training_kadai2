@@ -15,9 +15,9 @@ html(lang="jp")
       a(href="/profile").btn.btn-secondary.float-right プロフィール
 
     h2 違反報告一覧
-//    each post in posts
-//      div.card.my-3
-//        div.card-header
+    each report in reports
+      h2 id #{report.id} ポストID#{report.postId} reportedBy #{report.reportedBy}
+      h2 コンテンツ　#{displayContent}
 //            - var isPostedByAdmin = (post.postedBy === 'admin')
 //            if isPostedByAdmin
 //              span #{post.id} : 管理人 ★
