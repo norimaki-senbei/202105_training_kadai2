@@ -21,7 +21,8 @@ html(lang="jp")
     - var isAdmin = (user === 'admin')
     if isAdmin
       each report in reports
-        div #{report.reportedBy}から投稿「#{report.content}」への違反報告がありました。
+        //span #{report.Post}
+        div #{report.reportedBy}から投稿「#{report.Post.title}」への違反報告がありました。
     else
       div 閲覧権限がありません。
     
