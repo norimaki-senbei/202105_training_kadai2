@@ -9,18 +9,20 @@ html(lang="jp")
     title 秘密の匿名掲示板
   body.container
     div.my-3
-      span #{user}でログイン中
-      a(href="/logout").btn.btn-info.float-right ログアウト
+      a(href="/logout").btn.btn-info.float-right ログアウト (#{user}でログイン中)
       h1 秘密の匿名掲示板
     div.my-3
       a(href="/profile").btn.btn-secondary.float-right プロフィール
+      br
+      br
       a(href="/posts").btn.btn-secondary.float-right 投稿一覧
 
     h2 違反報告一覧
     - var isAdmin = (user === 'admin')
     if isAdmin
       each report in reports
-        div #{report.reportedBy}から投稿「#{report.content}」への違反報告がありました。
+        //span #{report.Post}
+        div #{report.reportedBy}から投稿「#{report.Post.title}」への違反報告がありました。
     else
       div 閲覧権限がありません。
     
